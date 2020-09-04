@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite">
+    <!--    thread-count="2" parallel="tests"-->
+    <!--    Cross Browser Testing-->
+    <!--    Parameter to pass the value to WebAPI-->
+    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
+    <!--<parameter name="cloudEnvName" value="saucelab"/>-->
+        <parameter name="os" value="windows"/>
+<!--    <parameter name="os" value="OS X"/>-->
+        <parameter name="os_version" value="10"/>
+    <!--    <parameter name="os_version" value="Sierra"/>-->
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="80"/>
+    <parameter name="url" value="https://www.att.com/"/>
+
+    <test name="ATNT Home">
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="84"/>
+        <classes>
+            <!--            <class name="testRegistration.RegistrationTest"></class>-->
+
+            <class name="testSearch.SearchTest">
+
+                <!--                <methods>-->
+                <!--                    <exclude name="testSearch"></exclude>-->
+                <!--                    <exclude name="testSearchBoxCheckUsingGetItemValue"></exclude>-->
+                <!--                    <exclude name="testSearchBoxCheckGetItemsListFromExcel"></exclude>-->
+                <!--                </methods>-->
+            </class>
+        </classes>
+
+    </test>
+
+</suite>
+
+
+
+
+
